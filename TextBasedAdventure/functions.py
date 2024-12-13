@@ -120,14 +120,16 @@ def makeMe():
 
     if g.playerName == "dev1":
         g.playerClass = "Warrior"
-        g.strength += 3
+        g.strength += 2
+        g.vitality += 1
         g.intelligence -= 2
         g.speed -= 1
 
-        g.playerRace = "Creature"
+        g.playerRace = "Orc"
+        g.strength += 2
+        g.vitality += 2
         g.intelligence -= 2
-        g.speed += 1
-        g.vitality += 3
+        g.speed -= 2
 
         updatePlayerMods()
 
@@ -217,14 +219,19 @@ def makeMe():
 
     updatePlayerMods()
 
+    g.playerMaxHP = 20 + g.vitalityMod * 3
     g.playerHP = g.playerMaxHP
 
+    showPlayerInfo()
+
+def showPlayerInfo():
     print("")
-    print("Player Stats:")
-    print("Health: " + str(g.playerHP))
+    print("PLAYER INFO")
     print("Class: " + g.playerClass)
     print("Race: " + g.playerRace)
-    print("STATS")
+    print("Health: " + str(g.playerHP))
+    print("")
+    print("PLAYER STATS")
     print("Strength: " + str(g.strength))
     print("Intelligence: " + str(g.intelligence))
     print("Vitality: " + str(g.vitality))
