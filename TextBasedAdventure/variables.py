@@ -20,7 +20,7 @@ gridMY = 1
 enemyHP = 0
 
 #player variables
-playerName = "yarmen"
+playerName = ""
 charCode = ""
 
 playerClass = ""
